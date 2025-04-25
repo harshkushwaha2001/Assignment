@@ -10,4 +10,4 @@ class SignalTimingTest(TestCase):
          end = time.time()
          print(f"Total time taken: {end - start:.2f} seconds")
 
-         self.assertTrue((end - start) >= 10, "Signal did not delay for 5 seconds")
+         self.assertTrue((end - start) >= 10, "Signal did not delay for 10 seconds")
