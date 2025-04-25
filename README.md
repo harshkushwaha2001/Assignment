@@ -4,7 +4,7 @@ Topic: Django Signals
 ### Question 1: By default are django signals executed synchronously or asynchronously? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
 
 By default django signals are executed synchronously this can be shown by the fact that if two signals are fired at almost same time then their order of execution should not get altered.
-To prove it we have created 
+To prove it we have build the following : 
 
 ## User Model
 ![models](https://github.com/user-attachments/assets/8f24abee-280b-4113-afd9-e2a887a7398e)
@@ -13,10 +13,11 @@ To prove it we have created
 ![app1_signals](https://github.com/user-attachments/assets/d533b0ba-0811-45ac-ad24-43dbab9864d2)
 
 ## app1/tests.py
-![app1_test](https://github.com/user-attachments/assets/0750d4dc-bb2f-4c69-890a-830d492166b4)
+![image](https://github.com/user-attachments/assets/9c66f80c-94f5-4311-86df-181f79cd9867)
 
-in above code we have fired the signals simultaneously and waited for five seconds each
-the results can be confirmed by the order of execution of both signals and total time taken
+
+In above code we have fired the signals simultaneously and waited for five seconds each
+the results can be confirmed by the order of execution of both signals and total time taken.
 
 ## app1 Test Result
 ![app1_test_result](https://github.com/user-attachments/assets/e3f48939-477b-4810-9043-abaec1c374cc)
@@ -25,7 +26,7 @@ ________________________________________________________________________________
 
 ### Question 2: Do django signals run in the same thread as the caller? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
 
-Yes, Django signals run on same thread as callerthis can be shown by confirming that the thread ID of both caller and signal are same
+Yes, Django signals run on same thread as caller, this can be shown by confirming that the thread ID of both caller and signal are same.
 
 ## User Model
 ![models](https://github.com/user-attachments/assets/8f24abee-280b-4113-afd9-e2a887a7398e)
@@ -62,6 +63,7 @@ we neither have main user neither dummy user
 ![app3_test_result](https://github.com/user-attachments/assets/219a505a-2c53-40f2-b27f-a4b715d2823c)
 
 ...................................................................................................................................................................
+
 Topic: Custom Classes in Python
 
 ### Description: You are tasked with creating a Rectangle class with the following requirements:
@@ -71,9 +73,10 @@ Topic: Custom Classes in Python
 3. When an instance of the Rectangle class is iterated over, we first get its length in the format: {'length': <VALUE_OF_LENGTH>} followed by the width {width: <VALUE_OF_WIDTH>}
 
 To make a class iterable we can either define:
-__iter__() and __next__() or Use a generator __iter__()
+```__iter__()``` and ```__next__()``` or Use a generator ```__iter__()```
 
-![image](https://github.com/user-attachments/assets/b8bed7d3-fb09-408f-9eb9-958aa83f5f3b)
+![RectangleClass](https://github.com/user-attachments/assets/b4928b9b-745c-4df6-a561-a2b056ef2bf2)
+
 
 
 
